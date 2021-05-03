@@ -141,6 +141,10 @@ body {
   max-width: 500px;
 }
 
+.inside-container {
+  width: 100%;
+}
+
 /* ================== */
 /* SECTIONS */
 /* ================== */
