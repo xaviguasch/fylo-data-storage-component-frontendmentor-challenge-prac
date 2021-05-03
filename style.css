@@ -1,7 +1,311 @@
-.attribution {
-  font-size: 11px;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  --ff-main: 'Raleway', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-08: 0.5em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-60: 3.5rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
+
+  --clr-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+  --clr-pale-blue: hsl(243, 100%, 93%);
+  --clr-grayish-blue: hsl(229, 7%, 55%);
+  --clr-dark-blue: hsl(228, 56%, 26%);
+  --clr-very-dark-blue: hsl(229, 57%, 11%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-pale-skin: hsl(6, 100%, 80%);
+}
+
+body {
+  color: var(--clr-pale-blue);
+  font-family: var(--ff-main);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+
+.text {
   text-align: center;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.accent {
+  font-weight: var(--fw-bold);
+}
+
+.progress-limit {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-12);
+}
+
+.bubble-text {
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  font-size: var(--fs-12);
+}
+
+.accent-big {
+  color: var(--clr-very-dark-blue);
+  font-size: var(--fs-40);
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  background-color: var(--clr-very-dark-blue);
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.6;
+  transition: all 400ms linear;
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: url('./images/bg-mobile.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 0 2em;
+}
+
+.container {
+  height: 95%;
+  margin: 0em auto;
+
+  min-width: 290px;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+.side-one,
+.side-two {
+  background-color: var(--clr-dark-blue);
+  padding: 2.5em 2em;
+  border-radius: 0.5em;
+  width: 100%;
+}
+
+.side-one {
+  border-top-right-radius: 8em;
+}
+
+.logo {
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+
+  margin-top: 2em;
+}
+
+.side-two {
+  margin-top: 1.25em;
+  padding-bottom: 5em;
+
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--clr-very-dark-blue);
+  border-radius: 2em;
+  position: relative;
+  padding: 0.2em;
+
+  margin-top: 1em;
+}
+
+.progress-fill {
+  background: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 2em;
+  height: 100%;
+  width: 75%;
+}
+
+.progress-ball {
+  position: absolute;
+  top: 4px;
+  left: 70%;
+
+  height: 12px;
+  width: 12px;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+}
+
+.progress-limit {
+  position: absolute;
+  top: 25px;
+}
+
+.progress-limit--one {
+  left: -5px;
+}
+.progress-limit--two {
+  right: -5px;
+}
+
+.left-bubble {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 55%;
+  max-width: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.25em 1em;
+  border-radius: 0.75em;
+
+  transform: translate(-50%, 50%);
+
+  background-color: var(--clr-white);
+}
+
+.bubble-text {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.footer {
+  font-size: var(--fs-12);
+  text-align: center;
+}
+.footer a {
+  color: var(--clr-pale-skin);
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 0 4em;
+    background: url('./images/bg-desktop.png') no-repeat;
+    background-size: cover;
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+
+    min-width: unset;
+    max-width: 1000px;
+
+    gap: 2em;
+  }
+
+  .side-one {
+    flex: 1;
+  }
+
+  .side-two {
+    flex: 1.5;
+    align-self: center;
+
+    padding: 3em 2em 4.5em;
+  }
+
+  .left-bubble {
+    bottom: unset;
+    left: unset;
+    top: 0;
+    right: 5%;
+
+    transform: translate(0%, -65%);
+
+    max-width: 180px;
+
+    width: 40%;
+  }
+
+  .left-bubble::before {
+    content: '';
+    background-color: var(--clr-white);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    transform: translate(0%, 50%);
+
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+
+  .text {
+    text-align: left;
+  }
 }

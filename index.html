@@ -11,8 +11,6 @@
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body>
-    185 GB Left 0 GB 1000 GB
-
     <div class="container">
       <div class="side-one">
         <div class="logo">
@@ -38,12 +36,15 @@
 
         <div class="progress-bar">
           <div class="progress-fill"></div>
-          <div class="progress-bar"></div>
-          <div class="progress-limit">0 GB</div>
-          <div class="progress-limit">1000 GB</div>
+          <div class="progress-ball"></div>
+          <div class="progress-limit progress-limit--one">0 GB</div>
+          <div class="progress-limit progress-limit--two">1000 GB</div>
         </div>
         <div class="left-bubble">
-          <p class="bubble-text"><span class="accent-big">185</span> GB left</p>
+          <div class="bubble-text">
+            <span class="accent-big">185</span>
+            <p>GB left</p>
+          </div>
         </div>
       </div>
     </div>
